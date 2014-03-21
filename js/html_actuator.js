@@ -137,3 +137,45 @@ HTMLActuator.prototype.clearMessage = function () {
   this.messageContainer.classList.remove("game-won");
   this.messageContainer.classList.remove("game-over");
 };
+
+HTMLActuator.prototype.valueToText = function(tile){
+  var textValue = "";
+  
+  switch(tile.value){
+    case 2:
+      textValue = "Two";
+      break;
+    case 4:
+      textValue = "Four";
+      break;
+    case 8:
+      textValue = "Eight";
+      break;
+    case 16:
+      textValue = "Sixteen";
+      break;
+    case 32:
+      textValue = "Thirty-two";
+      break;
+    case 64:
+      textValue = "Sixty-four";
+      break;
+    case 128:
+      textValue = "One-twenty-eight";
+      break;
+    case 256:
+      textValue = "Two-fifty-six";
+      break;
+    case 512:
+      textValue = "Five-twelve";
+      break;
+    case 1024:
+      textValue = "1k-twenty-four";
+      break;      
+    case 2048:
+      textValue = "2k-forty-eight";
+      break;
+  }
+  
+  return textValue;
+};
